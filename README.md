@@ -1,5 +1,12 @@
 # RaceKit System for Meta Horizon Worlds 
 
+![Screenshot 1](images/game_ss1.jpg)
+![Screenshot 2](images/game_ss2.jpg)
+![Screenshot 3](images/game_ss3.jpg)
+![Screenshot 4](images/game_ss4.jpg)
+
+# Scripts and scene setup
+
 This is a detailed explanation of how each script needed for this system works.  But don't worry, you can download the remixable world directly in Meta Horizon Worlds with it all setup and preconfigured, ready to go out of the box.  You can change out all of the original art we provided, or use use your own from the track to the scenery to the vehicle and projectiles.  They are all customizable.  Each piece of art used in this template system was created by DJ M3N4C3, and the scripting was done by free.light
 
 ![Scene Root Hiearchy](images/scene_root.jpg)
