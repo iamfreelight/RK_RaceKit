@@ -44,7 +44,7 @@ Red arrows marks objects that have a script on that transform (the top of each o
 
 # Projectile Prefabs
 
-Each projectile prefab, when changed, needs to be saved off as an inventory item, any overrides applied, and reslotted into the ProjectileSpawner on each vehicle before their spawned items will update.  This script, on a child of each vehicle, is also used as the spawnpoint for each vehicle, so take note we have them placed in front of and above, and slightly rotated so that items spawn correctly and don't hit ourself when doing so.  Each projectile prefab needs to have the `RK_ProjectileSpawner` script at the root of them.  Each projectile needs to have the 'vehicle' tag so they register collision with all of the vehicles colliders, as well as each vehicle and all of its colliders should have the 'vehicle' tag.. Each projectile can also optionally have the 'bolt', 'banana', or 'dart', or 'flatten'  tag too, and these will cause one of the 3 physics/scaling effects to occur to vehicles and their drivers when hit by objects with those tags !
+Each projectile prefab, when changed, needs to be saved off as an inventory item, any overrides applied, and reslotted into the ProjectileSpawner on each vehicle before their spawned items will update.  This script's transform, is also used as the spawnpoint for each vehicles projectile spawner, so take note we have them placed in front of and above, and slightly rotated so that items spawn correctly and don't hit ourself when doing so.  Each projectile prefab needs to have the `RK_ProjectileSpawner` script at the root of them.  Each projectile can also optionally have the 'bolt', 'banana', or 'dart', or 'flatten'  tag at the root, and these will cause one of the physics/scaling effects to occur to vehicles and their drivers when hit by objects with those tags !
 
 ![Projectile Prefabs](images/projectile_prefabs.jpg)
 
@@ -712,13 +712,16 @@ The `RK_VehicleScript_1a` script provides the core driving functionality for a v
 
 *   `boostSpeedIncrease` (Number, Default: `10`): The amount of extra speed to be applied to the car when "boosted".
 
-*`ProjectileReactionCollider1` - `ProjectileReactionCollider5` (Entity):  Add the five collider objects to be used for detecting "Power Up" triggers and "Projectile's" hitting them, incase your vehicle has more than one collider, like the default carts that come with this kit in the Remixable World template
+*   `HitBoxTrigger` (Trigger Entity):  Add the trigger volume that is inside the vehicle, a trigger zone gizmo, used for detecting hits from Projectile's hitting the vehicle
+
 
 **Usage Notes:**
 
 *   **Hierarchy:** The vehicle entity and its child entities must be set up correctly for the script to function properly. Ensure that all required entities (wheels, audio source, particle emitters, etc.) are assigned to the appropriate properties.
 
 *   **Collision:** The vehicle entity must have a collision volume so that it can interact with the environment and other objects.
+
+*   **Trigger Zone:** The vehicle entity must have a trigger volume so that it can interact with the projectiles that hit it
 
 *   **Camera Control:** The script provides several camera modes (third-person, first-person, attach, orbit). Players can switch between these modes using an input action.
 
@@ -861,6 +864,8 @@ The `RK_ProjectileSpawner` script is responsible for spawning projectile entitie
 *   `prefab1Velocity` - `prefab5Velocity` (Number, Default: `60`): The speed (in units per second) at which each prefab should be launched when spawned. A higher value means the projectile will travel faster. Set to `0` for non-projectile effects that are to occur where the driver spawns them.
 
 *   `destroyTimeout` (Number, Default: `30`): The amount of time (in seconds) after a projectile is spawned before it is automatically destroyed. This prevents the world from becoming cluttered with projectiles.
+
+*   `vehicleScript` (Entity): This needs to have the root of the vehicle object slotted in here, it is used to grab the velocity and angular velocity of the vehicle itself to add to the projectiles velocity when spawning/shooting them
 
 **Usage Notes:**
 
