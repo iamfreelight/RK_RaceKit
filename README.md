@@ -38,7 +38,7 @@ The projectiles section is meant for you to save off each one as a prefab, and t
 
 You should have a hiearchy setup similar to what is shown below, for each vehicle object.   Each vehicle object should be in the root of the scene.  Each vehicle needs to be slotted into the RaceController script, as well as setup with corresponding color codes in the MapUIManager script that controls the livemap overlay seen in desktop, mobile & VR !
 
-![Vehicle Object Hiearchy](images/vehicle_hiearchy.jpg)
+![Vehicle Object Hiearchy](images/vehicle__hiearchy.jpg)
 
 Red arrows marks objects that have a script on that transform (the top of each one of these children)
 
