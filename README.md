@@ -1,11 +1,14 @@
 # RaceKit System for Meta Horizon Worlds 
 
-[![YouTube Video](https://img.youtube.com/vi/QAoQf3bt2N8/0.jpg)](https://www.youtube.com/watch?v=QAoQf3bt2N8)
-
 ![Screenshot 1](images/game_ss1.jpg)
 ![Screenshot 2](images/game_ss2.jpg)
 ![Screenshot 3](images/game_ss3.jpg)
 ![Screenshot 4](images/game_ss4.jpg)
+
+
+[![YouTube Video](https://img.youtube.com/vi/QAoQf3bt2N8/0.jpg)](https://www.youtube.com/watch?v=QAoQf3bt2N8)
+
+(⬆️ Click for YouTube Video!)
 
 # Scripts and scene setup
 
