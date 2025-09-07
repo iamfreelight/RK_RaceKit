@@ -235,6 +235,29 @@ The `RK_SpectatorCamera` script provides a spectator view by attaching the local
 
 
 
+# RK_CameraToggle
+
+**Purpose:**
+
+The `RK_CameraToggle` script allows players to switch between first-person and third-person camera views when they enter a trigger volume. This is primarily intended for use by spectators, allowing them to choose their preferred viewing perspective.
+
+**Scene Setup:**
+
+1.  Create a new entity in your scene to serve as the camera toggle trigger.
+2.  Add a `TriggerGizmo` component to this entity, configuring its size and shape to define the activation area.
+3.  Add the `RK_CameraToggle` script to the same entity.
+
+**Properties:**
+
+*   `useFirstPerson` (Boolean, Default: `true`):
+    *   If `true`, entering the trigger will switch the player's camera to first-person view.
+    *   If `false`, entering the trigger will switch the player's camera to third-person view.
+
+**Usage Notes:**
+
+*   **Placement:** Place the trigger entity in a location that is easily accessible to players who you want to be able to toggle their camera view. This might be near a spectator area or viewing platform.
+
+
 # RK_StartRace
 
 ![RK_StartRace Script](images/RK_StartRace.jpg)
