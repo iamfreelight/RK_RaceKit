@@ -571,7 +571,7 @@ The `RK_PrizeTrigger` script creates a trigger area that, when entered by a vehi
 
 # RK_VehicleScript_1a
 
-![RK_VehicleScript_1a](images/RK_VehicleScript_1a.jpg)
+![RK_VehicleScript_1a](images/RK_VehicleScript__1a.jpg)
 
 **Purpose:**
 
