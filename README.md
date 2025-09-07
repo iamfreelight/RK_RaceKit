@@ -843,7 +843,7 @@ The `RK_PrizeBar` script provides a user interface (UI) element that displays th
 
 # RK_ProjectileSpawner
 
-![RK_ProjectileSpawner](images/RK_ProjectileSpawner.jpg)
+![RK_ProjectileSpawner](images/RK__ProjectileSpawner.jpg)
 
 **Purpose:**
 
