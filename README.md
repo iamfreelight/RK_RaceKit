@@ -20,6 +20,8 @@ The link to the entry on Devpost is here: [link]
 
 This is a detailed explanation of how each script needed for this system works.  But don't worry, you can download the remixable world directly in Meta Horizon Worlds with it all setup and preconfigured, ready to go out of the box.  You can change out all of the original art we provided, or use use your own from the track to the scenery to the vehicle and projectiles.  They are all customizable.  Each piece of art used in this template system was created by DJ M3N4C3, and the scripting was done by free.light
 
+1.  **Ensure the "RK_RacingKit_local.ts file has its `Execution Mode` of set to **Local** in the Horizon Worlds script settings, and "RK_RacingKit_server.ts" file has its `Execution Mode` set to **Default** (this makes it run on the server)
+
 ![Scene Root Hiearchy](images/scene_root.jpg)
 
 # Controller / Non-vehicle scripts - RootObject Hiearchy 
@@ -62,7 +64,6 @@ The `RK_RaceManager` script is responsible for managing player entry into a race
 1.  Create a new entity in your scene for all of the non-vehicle / system scripts, and create a child object in it for this script. This entity will host the `RK_RaceManager` script.  
 2.  Create or designate one entity to serve as the return slot (`returnSlot`). This transform represents the location where players are teleported after the race finishes or they exit.
 3.  Create or designate another entity to serve as the track slot (`trackSlot`). This is the location where players are teleported to when they join the race before it starts, should be near the vehicles.
-4.  **Crucially**, ensure the "RK_RacingKit_local.ts file has its `Execution Mode` of set to **Default** in the Horizon Worlds script settings (this makes it run on the server).
 
 **Properties:**
 
@@ -90,7 +91,6 @@ The `RK_RaceManager` script is responsible for managing player entry into a race
     2.  On 'start', the `RK_RaceManager` sets the `raceActive` flag.
     3.  On 'stop', the `RK_RaceManager` teleports all players in the race to the `returnSlot` and clears the `playersInRace` map.
 *   Ensure that the `returnSlot` and `trackSlot` entities have stable positions. If these entities move during gameplay, the teleport destinations will change unexpectedly.
-*   Set the execution mode of this script to **Default** (RK_RacingKit_local.ts)
 *   If you dont have the racecontroller set up at the same time, then the RaceManager will not properly receive TeleportPlayerEvents for your players on race finish.
 
 
@@ -146,7 +146,6 @@ The `RK_RaceController` script manages the overall race flow, including starting
 3.  Assign these triggers to the appropriate properties in the `RK_RaceController` script.
 4.  Assign the vehicle entities to the `vehicle1`, `vehicle2`, etc., properties.
 5.  Assign the `finishRaceAudio1` and `finishRaceParticleFx1` entities if you wish to play audio and particle effects on race completion.
-6.  Set the `Execution Mode` of this script to **Default** in the Horizon Worlds script settings (this makes it run on the server) if using seperated scripts.
 
 **Properties:**
 
@@ -231,7 +230,7 @@ The `RK_SpectatorCamera` script provides a spectator view by attaching the local
     *   The script handles ownership transfers, ensuring that only one player controls the camera at a time. If a player gains ownership, the camera attaches to the `targetEntity` for that player. If the player loses ownership, they are returned to their original third-person camera mode.
 *   **Placement and Visibility:** Place the camera controller entity in a location that makes sense for a spectator. The entity can be invisible, as it primarily functions as a script container.
 *   **Multiple Cameras:** You can have multiple `RK_SpectatorCamera` instances in your scene, each following a different `targetEntity`.
-* Ensure the execution mode is set to **Local**.
+
 * **Exiting the camera:** Make sure to add an interactable button to give the spectator an easy exit button.
 
 
@@ -337,8 +336,6 @@ The `RK_LeaderboardUpdater` script is responsible for receiving race completion 
     2.  The `RK_LeaderboardUpdater` receives the event and retrieves the `Player` object using the player ID.
     3.  The script then calls the `world.leaderboards.setScoreForPlayer()` method to update the leaderboard with the player's score (finish time).
 
-* Make sure to set the Execution Mode of this script to **Default**.
-
 * The Leaderboard updater is also in charge of telling the raceManager to teleport you after you have finished and added your name to the board!
 
 
@@ -362,7 +359,6 @@ The `RK_MapUIManager` script is responsible for displaying a live map in the UI,
 4. Add the `RK_MapUIManager` script to the UI object, and slot in `TrackCorner1`, `TrackCorner2`, and `TrackCorner3` in world space.
 5.  Create any number of vehicle root objects (each with basic collision) and add them to the available slots as required.
 6.  Make sure to add a world space texture, and set the id correctly for a map image display as a background.
-7. The execution mode is **Server**.
 
 **Properties:**
 
@@ -441,7 +437,6 @@ The `RK_LiveLeaderboard` script displays a real-time leaderboard showing the cur
     1.  The `RK_RaceController` script calculates the current positions of all racers and sends this information to the `RK_LiveLeaderboard` script using a network event. You MUST add a `LiveLeaderboard` object to your scene, and set that on the race controller, or this process is not possible.
     2.  The `RK_LiveLeaderboard` script receives the position updates and updates its UI to reflect the current standings.
 
-* The Execution mode should be **Server**
 
 * If the display of the leaderboard gets goofy while in editor mode, it's probably from the script getting recompiling, and I think this might be an editor bug, but unsure at this time.  The way to fix it is to simply restart the editor server instance by going to 'Shutdown Server' and just going back into edit the same world.  I have never seen this bug occur at runtime / in-world though thankfully.
 
@@ -773,7 +768,6 @@ The `RK_RacePositionOverlay` script displays a UI element on the screen showing 
 **Usage Notes:**
 
 *   **Time Synchronization:** The script uses network events to synchronize the race timer across all clients, ensuring consistent timing.
-* The Execution mode is **Local**.
 
 # RK_PrizeBar
 
@@ -818,7 +812,6 @@ The `RK_PrizeBar` script provides a user interface (UI) element that displays th
 *   **UI Layout:** Adjust the `mapAnchor`, `mapOffsetX`, `mapOffsetY`, `mapWidth`, and `mapHeight` properties to position the UI element appropriately on the screen.
 *   **Prize Assets:** Make sure the asset IDs for the prize textures are correct and that the assets are loaded in your world.
 *   **Button Binding:** The script binds input actions to select and spawn prizes.  These input bindings are automatically handled when a player enters the `AvatarPoseGizmo` trigger.
-* The execution mode is **Local**.
 
 # Projectile Objects & and their script
 
