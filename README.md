@@ -1,15 +1,11 @@
 # RaceKit System for Meta Horizon Worlds 
 
+[![YouTube Video](https://img.youtube.com/vi/QAoQf3bt2N8/0.jpg)](https://www.youtube.com/watch?v=QAoQf3bt2N8)
+
 ![Screenshot 1](images/game_ss1.jpg)
 ![Screenshot 2](images/game_ss2.jpg)
 ![Screenshot 3](images/game_ss3.jpg)
 ![Screenshot 4](images/game_ss4.jpg)
-
-
-[![YouTube Video](https://img.youtube.com/vi/QAoQf3bt2N8/0.jpg)](https://www.youtube.com/watch?v=QAoQf3bt2N8)
-
-(Click for YouTube video link)
-
 
 # Scripts and scene setup
 
@@ -89,7 +85,7 @@ The `RK_RaceManager` script is responsible for managing player entry into a race
 *   If you dont have the racecontroller set up at the same time, then the RaceManager will not properly receive TeleportPlayerEvents for your players on race finish.
 
 
-======
+
 
 # RK_RaceEntryButton
 
@@ -122,7 +118,6 @@ The `RK_RaceEntryButton` script provides a button or trigger that players can in
 *   The `RaceJoinEvent` is sent using the player's *index* within the Horizon Worlds player list. This index is used by the `RK_RaceManager` to retrieve the `Player` object.
 
 
-=====
 
 # RK_RaceController
 
@@ -186,8 +181,6 @@ The `RK_RaceController` script manages the overall race flow, including starting
 * **Disqualification:** If a player does not move/drive in the race, or takes too long, they will get "dq'd"
 
 
-=====
-
 
 # RK_SpectatorCamera
 
@@ -229,7 +222,7 @@ The `RK_SpectatorCamera` script provides a spectator view by attaching the local
 * Ensure the execution mode is set to **Local**.
 * **Exiting the camera:** Make sure to add an interactable button to give the spectator an easy exit button.
 
-=====
+
 
 # RK_StartRace
 
@@ -268,7 +261,7 @@ The `RK_StartRace` script is designed to act as the interactive start/stop butto
 * When used as isStartButton is enabled, it has a safety check to make sure it does not restart the race or countdown while the race is active, and blocks accidental multiple race instances
 
 
-======
+
 
 # RK_ResetTriggerRelay
 
@@ -300,7 +293,7 @@ The `RK_ResetTriggerRelay` script is designed to work alongside the `RK_RaceCont
 *   **Vehicle Tag:** The script only sends reset messages for entities that have the tag specified in the `vehicleTag` property. This prevents accidental resets of other objects.
 *   When a vehicle enters a trigger area, its position and rotation are sent to the `RK_RaceController`, which then teleports the vehicle back to the last valid checkpoint.
 
-======
+
 
 # RK_LeaderboardUpdater
 
@@ -338,7 +331,7 @@ The `RK_LeaderboardUpdater` script is responsible for receiving race completion 
 
 
 
-======
+
 
 
 # RK_MapUIManager
@@ -397,7 +390,7 @@ The `RK_MapUIManager` script is responsible for displaying a live map in the UI,
 
 
 
-======
+
 
 
 # RK_LiveLeaderboard
@@ -471,7 +464,7 @@ The `RK_TeleportPlayer` script provides a simple way to teleport a player to a p
 
 
 
-======
+
 
 # RK_RotateCube
 
@@ -499,7 +492,7 @@ The `RK_RotateCube` script provides a simple way to animate an entity by continu
 *   **Customization:** Experiment with different values for `rotationSpeedX`, `rotationSpeedY`, and `rotationSpeedZ` to achieve the desired rotation effect.
 *   **Application:** This script is suitable for adding visual interest to your scene, such as rotating decorations or displaying prizes.
 
-=======
+
 
 # RK_PrizeTrigger
 
@@ -537,7 +530,7 @@ The `RK_PrizeTrigger` script creates a trigger area that, when entered by a vehi
 * The assigned sound entity should have a AudioGizmo on it. This sound will play when you trigger the object.
 * The trigger will only work ONCE! Be sure to set a respawn timer to allow the object to be re-triggered.
 
-======
+
 
 
 # The Vehicle Objects hiearchy & and their scripts
