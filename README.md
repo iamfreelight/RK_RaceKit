@@ -24,14 +24,14 @@ Red arrows marks objects that have a script on that transform (the top of each o
 
 Each projectile prefab, when changed, needs to be saved off as an inventory item, any overrides applied, and reslotted into the ProjectileSpawner on each vehicle before their spawned items will update.  This script, on a child of each vehicle, is also used as the spawnpoint for each vehicle, so take note we have them placed in front of and above, and slightly rotated so that items spawn correctly and don't hit ourself when doing so.  Each projectile prefab needs to have the `RK_ProjectileSpawner` script at the root of them.  Each projectile needs to have the 'vehicle' tag so they register collision with all of the vehicles colliders, as well as each vehicle and all of its colliders should have the 'vehicle' tag.. Each projectile can also optionally have the 'bolt', 'banana', or 'dart', or 'flatten'  tag too, and these will cause one of the 3 physics/scaling effects to occur to vehicles and their drivers when hit by objects with those tags !
 
-![projectile_prefabs](images/projectile_prefabs.jpg)
+![Projectile Prefabs](images/projectile_prefabs.jpg)
 
 
 # Explanation of each non-vehicle script
 
 # RK_RaceManager
 
-![RK_RaceManager Script(images/RK_RaceManager.jpg)
+![RK_RaceManager Script](images/RK_RaceManager.jpg)
 
 **Purpose:**
 
@@ -78,7 +78,7 @@ The `RK_RaceManager` script is responsible for managing player entry into a race
 
 # RK_RaceEntryButton
 
-![RK_RaceEntryButton Script(images/RK_RaceEntryButton.jpg)
+![RK_RaceEntryButton Script](images/RK_RaceEntryButton.jpg)
 
 **Purpose:**
 
@@ -111,7 +111,7 @@ The `RK_RaceEntryButton` script provides a button or trigger that players can in
 
 # RK_RaceController
 
-![RK_RaceController Script(images/RK_RaceController.jpg)
+![RK_RaceController Script](images/RK_RaceController.jpg)
 
 **Purpose:**
 
@@ -176,7 +176,7 @@ The `RK_RaceController` script manages the overall race flow, including starting
 
 # RK_SpectatorCamera
 
-![RK_SpectatorCamera Script(images/RK_SpectatorCamera.jpg)
+![RK_SpectatorCamera Script](images/RK_SpectatorCamera.jpg)
 
 **Purpose:**
 
@@ -217,7 +217,7 @@ The `RK_SpectatorCamera` script provides a spectator view by attaching the local
 
 # RK_StartRace
 
-![RK_StartRace Script(images/RK_StartRace.jpg)
+![RK_StartRace Script](images/RK_StartRace.jpg)
 
 **Purpose:**
 
@@ -256,7 +256,7 @@ The `RK_StartRace` script is designed to act as the interactive start/stop butto
 
 # RK_ResetTriggerRelay
 
-![RK_ResetTriggerRelay Script(images/RK_ResetTriggerRelay.jpg)
+![RK_ResetTriggerRelay Script](images/RK_ResetTriggerRelay.jpg)
 
 **Purpose:**
 
@@ -288,7 +288,7 @@ The `RK_ResetTriggerRelay` script is designed to work alongside the `RK_RaceCont
 
 # RK_LeaderboardUpdater
 
-![RK_LeaderboardUpdater Script(images/RK_LeaderboardUpdater.jpg)
+![RK_LeaderboardUpdater Script](images/RK_LeaderboardUpdater.jpg)
 
 **Purpose:**
 
@@ -327,7 +327,7 @@ The `RK_LeaderboardUpdater` script is responsible for receiving race completion 
 
 # RK_MapUIManager
 
-![RK_MapUIManager Script(images/RK_MapUIManager.jpg)
+![RK_MapUIManager Script](images/RK_MapUIManager.jpg)
 
 **Purpose:**
 
@@ -386,7 +386,7 @@ The `RK_MapUIManager` script is responsible for displaying a live map in the UI,
 
 # RK_LiveLeaderboard
 
-![RK_LiveLeaderboard Script(images/RK_LiveLeaderboard.jpg)
+![RK_LiveLeaderboard Script](images/RK_LiveLeaderboard.jpg)
 
 **Purpose:**
 
@@ -429,7 +429,7 @@ The `RK_LiveLeaderboard` script displays a real-time leaderboard showing the cur
 
 # RK_TeleportPlayer
 
-![RK_TeleportPlayer Script(images/RK_TeleportPlayer.jpg)
+![RK_TeleportPlayer Script](images/RK_TeleportPlayer.jpg)
 
 **Purpose:**
 
@@ -459,7 +459,7 @@ The `RK_TeleportPlayer` script provides a simple way to teleport a player to a p
 
 # RK_RotateCube
 
-![RK_RotateCube Script(images/RK_RotateCube.jpg)
+![RK_RotateCube Script](images/RK_RotateCube.jpg)
 
 **Purpose:**
 
@@ -487,7 +487,7 @@ The `RK_RotateCube` script provides a simple way to animate an entity by continu
 
 # RK_PrizeTrigger
 
-![RK_PrizeTrigger Script(images/RK_PrizeTrigger.jpg)
+![RK_PrizeTrigger Script](images/RK_PrizeTrigger.jpg)
 
 **Purpose:**
 
@@ -527,13 +527,11 @@ The `RK_PrizeTrigger` script creates a trigger area that, when entered by a vehi
 # The Vehicle Objects hiearchy & and their scripts
 
 
-![Shot showing all 8 vehicles in the editor Script(images/vehicle-shot1.jpg)
-![RK_VehicleScript (images/RK_VehicleScript_1a.jpg)
-
+![Shot showing all 8 vehicles in the editor](images/vehicle-shot1.jpg)
 
 # RK_VehicleScript_1a
 
-![RK_VehicleScript_1a Script(images/RK_VehicleScript_1a.jpg)
+![RK_VehicleScript_1a](images/RK_VehicleScript_1a.jpg)
 
 **Purpose:**
 
@@ -687,7 +685,7 @@ The `RK_VehicleScript_1a` script provides the core driving functionality for a v
 
 # RK_AvatarPoseGizmoController
 
-![RK_AvatarPoseGizmoController (images/RK_AvatarPoseGizmoController.jpg)
+![RK_AvatarPoseGizmoController](images/RK_AvatarPoseGizmoController.jpg)
 
 **Purpose:**
 
@@ -713,7 +711,7 @@ The `RK_AvatarPoseGizmoController` script manages ownership of certain component
 
 # RK_RacePositionOverlay
 
-![RK_RacePositionOverlay (images/RK_RacePositionOverlay.jpg)
+![RK_RacePositionOverlay](images/RK_RacePositionOverlay.jpg)
 
 **Purpose:**
 
@@ -757,7 +755,7 @@ The `RK_RacePositionOverlay` script displays a UI element on the screen showing 
 
 # RK_PrizeBar
 
-![RK_PrizeBar (images/RK_PrizeBar.jpg)
+![RK_PrizeBar](images/RK_PrizeBar.jpg)
 
 **Purpose:**
 
@@ -804,7 +802,7 @@ The `RK_PrizeBar` script provides a user interface (UI) element that displays th
 
 # RK_ProjectileSpawner
 
-![RK_ProjectileSpawner (images/RK_ProjectileSpawner.jpg)
+![RK_ProjectileSpawner](images/RK_ProjectileSpawner.jpg)
 
 **Purpose:**
 
