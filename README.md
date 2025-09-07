@@ -440,6 +440,7 @@ The `RK_LiveLeaderboard` script displays a real-time leaderboard showing the cur
 * If the display of the leaderboard gets goofy while in editor mode, it's probably from the script getting recompiling, and I think this might be an editor bug, but unsure at this time.  The way to fix it is to simply restart the editor server instance by going to 'Shutdown Server' and just going back into edit the same world.  I have never seen this bug occur at runtime / in-world though thankfully.
 
 
+![Screenshot showing how to grab AssetId of textures](images/assetid.jpg)
 
 
 # RK_TeleportPlayer
