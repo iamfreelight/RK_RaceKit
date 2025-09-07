@@ -125,6 +125,9 @@ The `RK_RaceEntryButton` script provides a button or trigger that players can in
 # RK_RaceController
 
 ![RK_RaceController Script](images/RK_RaceController.jpg)
+![RK_RaceController Script](images/checkpoint_triggers.jpg)
+
+
 
 **Purpose:**
 
