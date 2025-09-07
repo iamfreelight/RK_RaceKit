@@ -179,6 +179,7 @@ The `RK_RaceController` script manages the overall race flow, including starting
 # RK_SpectatorCamera
 
 ![RK_SpectatorCamera Script](images/RK_SpectatorCamera.jpg)
+![Showing the actual buttons for spectator cams on vehicles in the world](images/spectator_cams.jpg)
 
 **Purpose:**
 
