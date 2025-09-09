@@ -10,11 +10,19 @@
 
 (?? Click for YouTube Video!)
 
+[![YouTube Video](https://img.youtube.com/vi/QAoQf3bt2N8/0.jpg)](https://www.youtube.com/watch?v=QAoQf3bt2N8)
+
+(?? Click for YouTube Video!)
+
+
+
+https://www.youtube.com/watch?v=0M-IthAdDus
+
 # Links
 
-The remixable world can be found here: [link]
+The remixable world can be found [![here]](https://horizon.meta.com/world/24905457285728193/?locale=en_US)
 
-The link to the entry on Devpost is here: [link]
+The link to the entry on Devpost is [![here]](https://devpost.com/software/cart-racing-system)
 
 # Scripts and scene setup
 
