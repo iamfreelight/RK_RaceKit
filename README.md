@@ -600,6 +600,8 @@ The `RK_VehicleScript_1a` script provides the core driving functionality for a v
 
 *   `turnspeed` (Number, Default: `1`): The rate at which the vehicle turns.
 
+*   `mobileTurnspeed` (Number, Default: `0.4`): The rate at which the vehicle turns, special custom value for mobile for turning speed parity across desktop/vr & mobile
+
 *   `minAngularVelocity` (Number, Default: `-1`): The minimum rate at which the vehicle turns.
 
 *   `maxAngularVelocity` (Number, Default: `1`): The maxiumum rate at which the vehicle turns.
