@@ -571,7 +571,7 @@ The `RK_PrizeTrigger` script goes on TriggerZome gizmos's and creates an area th
 
 # RK_VehicleScript_1a
 
-![RK_VehicleScript_1a](images/RK_VehicleScript__1aa.jpg)
+![RK_VehicleScript_1a](images/RK_VehicleScript__1a2.jpg)
 
 **Purpose:**
 
