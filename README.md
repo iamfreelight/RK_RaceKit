@@ -23,7 +23,7 @@ The link to the entry on Devpost is [here](https://devpost.com/software/cart-rac
 
 # Scripts and scene setup
 
-This is a detailed explanation of how each script needed for this system works.  But don't worry, you can download the remixable world directly in Meta Horizon Worlds with it all setup and preconfigured, ready to go out of the box.  You can change out all of the original art we provided, or use use your own from the track to the scenery to the vehicle and projectiles.  They are all customizable.  Each piece of art used in this template system was created by DJ M3N4C3, and the scripting was done by free.light
+This is a detailed explanation of how each script needed for this system works and can be setup from scratch... But don't worry, you can download the remixable world directly in Meta Horizon Worlds with it all setup, preconfigured & ready to go out of the box.  You can change out all of the original art we provided, or use use your own from the track to the scenery to the vehicle and projectiles.  They are all customizable.  Each piece of art used in this template system was created by DJ M3N4C3, and the scripting was done by free.light
 
 1.  **Ensure the "RK_RacingKit_local.ts file has its `Execution Mode` of set to **Local** in the Horizon Worlds script settings, and "RK_RacingKit_server.ts" file has its `Execution Mode` set to **Default** (this makes it run on the server)
 
