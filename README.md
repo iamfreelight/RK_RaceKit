@@ -567,7 +567,7 @@ The `RK_PrizeTrigger` script goes on TriggerZome gizmos's and creates an area th
 # The Vehicle Objects hiearchy & and their scripts
 
 
-![Shot showing all 8 vehicles in the editor](images/vehicle-shot1.jpg)
+![Shot showing all 8 vehicles in the editor](images/vehicle-shot2.jpg)
 
 # RK_VehicleScript_1a
 
