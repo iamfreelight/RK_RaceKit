@@ -6,7 +6,7 @@
 ![Screenshot 4](images/game_ss4.jpg)
 
 
-[![YouTube Video](https://img.youtube.com/vi/QAoQf3bt2N8/0.jpg)](https://www.youtube.com/watch?v=QAoQf3bt2N8)
+[![YouTube Video](https://img.youtube.com/vi/0M-IthAdDus/0.jpg)](https://www.youtube.com/watch?v=0M-IthAdDus)
 
 (?? Click for YouTube Video!)
 
