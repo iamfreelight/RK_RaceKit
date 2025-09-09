@@ -118,7 +118,7 @@ The `RK_RaceEntryButton` script provides a button or trigger that players can in
 1.  Create a new entity in your scene that will act as the "join button". This can be a simple cube or a more visually appealing object.
 2.  Add a `TriggerGizmo` component to the button entity. Configure the trigger's size and shape to define the interaction area.
 3.  Add the `RK_RaceEntryButton` script to the same entity as the `TriggerGizmo`.
-4.  Ensure that the entity is interactable by players (e.g., the interaction mode is set to 'Physics'). It will automatically pick up the player upon trigger, so that is enough.
+4.  Ensure that the entity is interactable by players, it will automatically pick up the player upon trigger, so that is enough.
 
 **Properties:**
 
@@ -239,9 +239,6 @@ The `RK_SpectatorCamera` script provides a spectator view by attaching the local
     *   The script handles ownership transfers, ensuring that only one player controls the camera at a time. If a player gains ownership, the camera attaches to the `targetEntity` for that player. If the player loses ownership, they are returned to their original third-person camera mode.
 *   **Placement and Visibility:** Place the camera controller entity in a location that makes sense for a spectator. The entity can be invisible, as it primarily functions as a script container.
 *   **Multiple Cameras:** You can have multiple `RK_SpectatorCamera` instances in your scene, each following a different `targetEntity`.
-
-* **Exiting the camera:** Make sure to add an interactable button to give the spectator an easy exit button.
-
 
 
 # RK_CameraToggle
@@ -386,11 +383,10 @@ The `RK_MapUIManager` script is responsible for displaying a live map in the UI,
 **Scene Setup:**
 
 1.  Add a UI Gizmo object to your scene. This object will be the anchor and root to displaying the map in world.
-2.  Select the Panel Height and Width, but typically this is a smaller object, so 256,256 will work perfectly. You may also need to select the world scale to a very low value, to display it in world to players, start with "0.05".
-3.  Create four entities in your scene to represent the corners of the racetrack. These entities should be placed at strategic points along the track to define the map's boundaries. The first three points are required, and the last is calculated.
-4. Add the `RK_MapUIManager` script to the UI object, and slot in `TrackCorner1`, `TrackCorner2`, and `TrackCorner3` in world space.
-5.  Create any number of vehicle root objects (each with basic collision) and add them to the available slots as required.
-6.  Make sure to add a world space texture, and set the id correctly for a map image display as a background.
+2.  Select the Panel Height and Width, but typically this should match or be a multiple of the original texture width and height.
+3.  Create four entities in your scene to represent the corners of the racetrack. These entities should be placed at each corner of the map, same corners the overhead view texture cuts off at, starting at top left, then top right, bottom left, then bottom right.
+4.  Add the `RK_MapUIManager` script to the UI object, and slot in `TrackCorner1`, `TrackCorner2`, and `TrackCorner3` in world space.
+5.  Slot in all 8 vehicles to the available slots, and select a color four each one.
 
 **Properties:**
 
@@ -429,10 +425,6 @@ The `RK_MapUIManager` script is responsible for displaying a live map in the UI,
 *   **Performance:** The `updateInterval` property can impact performance. If you experience performance issues, try increasing this value. This is due to calculating the positions of each vehicle and re-drawing them to the new position, in 2D space.
 
 
-
-
-
-
 # RK_LiveLeaderboard
 
 ![RK_LiveLeaderboard Script](images/RK_LiveLeaderboard.jpg)
@@ -444,7 +436,7 @@ The `RK_LiveLeaderboard` script displays a real-time leaderboard showing the cur
 **Scene Setup:**
 
 1. Create a new UI Gizmo object to display your leaderboard, this will be the parent of the Leaderboard, in scene. Ensure that this is not too big, the maximum rows is the most important factor. A small amount of testing will ensure this UI object displays properly in the world and nothing is cropped.
-2. You will also need to set a world scale in the X, Y and Z, in the top panel where you can set the name. This will ensure you can actually see this object in the world, you can start with something small like, "0.05"
+2. You will also need to set a world scale as you wish. This will ensure you can actually see this object in the world.
 3. Add the `RK_LiveLeaderboard` script to the UI Gizmo object in world.
 
 **Properties:**
@@ -530,8 +522,7 @@ The `RK_RotateCube` script provides a simple way to animate an entity by continu
 **Usage Notes:**
 
 *   **Customization:** Experiment with different values for `rotationSpeedX`, `rotationSpeedY`, and `rotationSpeedZ` to achieve the desired rotation effect.
-*   **Application:** This script is suitable for adding visual interest to your scene, such as rotating decorations or displaying prizes.
-
+*   **Application:** This script is suitable for adding visual interest to your scene, such as rotating prize cubes.
 
 
 # RK_PrizeTrigger
@@ -540,14 +531,14 @@ The `RK_RotateCube` script provides a simple way to animate an entity by continu
 
 **Purpose:**
 
-The `RK_PrizeTrigger` script creates a trigger area that, when entered by a vehicle, awards the vehicle a prize and then respawns after a delay. This is a SERVER script.
+The `RK_PrizeTrigger` script goes on TriggerZome gizmos's and creates an area that, when entered by a vehicle, awards the vehicle a prize and then respawns after a delay. This is a SERVER script.
 
 **Scene Setup:**
 
 1.  Create a new entity in your scene to act as the prize trigger.
 2.  Add a `TriggerGizmo` component to this entity. Configure the trigger's size and shape to define the area where players can collect the prize.
 3.  Add the `RK_PrizeTrigger` script to the same entity.
-4.  Optionally, add a mesh to the entity to visually represent the prize. Assign this mesh to the `mesh` property of the script.
+4.  Optionally, add a mesh to the entity to visually represent the prize. Assign this mesh to the `mesh` property of the script.  You can add various move scripts to them if you like, such as RK_RotateCube.ts or something custom.
 
 **Properties:**
 
@@ -771,7 +762,7 @@ The `RK_RacePositionOverlay` script displays a UI element on the screen showing 
 
 **Scene Setup:**
 
-1.  Create a new entity in your scene, and add a UI Gizmo to it. Select a panel size that will be suitable for seeing a timer and race stats. This entity will host the `RK_RacePositionOverlay` script.
+1.  Create a new entity in your vehicle hiearchy, and add a UI Gizmo to it. Select a panel size that will be suitable for seeing a timer and race stats. This entity will host the `RK_RacePositionOverlay` script.
 2.  Link the AvatarPoseGizmo (sitpoint) in the target vehicle to the `AvatarPoseGizmo` field in this script.
 
 **Properties:**
@@ -814,7 +805,7 @@ The `RK_PrizeBar` script provides a user interface (UI) element that displays th
 
 **Scene Setup:**
 
-1.  Create a new `UI Gizmo` entity in your scene. This entity will host the `RK_PrizeBar` script. Make sure you have set the panel width and height correctly, so all UI elements properly display on the panel itself.
+1.  Create a new `UI Gizmo` entity in your vehicle hiearchy. This entity will host the `RK_PrizeBar` script. Make sure you have set the panel width and height correctly, so all UI elements properly display on the panel itself.
 2. The prizeBar will want a link to where players will sit so the UI can be shown when there is a driver inside a vehicle. Create an AvatarPoseGizmo (sitpoint) on your target object to be the main object that can show the UI in world.
 3.  Link this main object to the AvatarPoseGizmo entity.
 
@@ -860,7 +851,7 @@ The `RK_ProjectileSpawner` script is responsible for spawning projectile entitie
 
 **Scene Setup:**
 
-1.  Create a new entity in your vehicle to host the `RK_ProjectileSpawner` script. This entity will act as the projectile spawn point.
+1.  Create a new entity in your vehicle hiearchy to host the `RK_ProjectileSpawner` script. This entity will act as the projectile spawn point.
 2.  Assign the desired projectile prefabs to the `prefab1` - `prefab5` properties.
 3.  Adjust the `prefab1Velocity` - `prefab5Velocity` properties to control the initial speed of each projectile.
 
