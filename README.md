@@ -48,6 +48,8 @@ Each projectile prefab, when changed, needs to be saved off as an inventory item
 
 ![Projectile Prefabs](images/projectile_prefabs.jpg)
 
+# Tags
+
 ![Tags](images/tags.png)
 
 
