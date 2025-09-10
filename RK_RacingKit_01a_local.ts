@@ -1,6 +1,6 @@
 /////////////////////////////////////////////////////////////////////////////////////////
 // Racing Kit for Meta Horizons 
-// by free.light - 08/2025 - iamfreelight@gmail.com - virtualworldsystems.com
+// by free.light - 08/2025 - iamfreelight@gmail.com
 /////////////////////////////////////////////////////////////////////////////////////////
 
 import * as ui from 'horizon/ui';
@@ -2406,5 +2406,6 @@ class RK_CameraToggleLocal extends hz.Component<typeof RK_CameraToggleLocal, {}>
     );
   }
 }
+
 
 hz.Component.register(RK_CameraToggleLocal);
