@@ -58,7 +58,7 @@ Each projectile prefab, when changed, needs to be saved off as an inventory item
 ![Tags](images/tags.png)
 
 
-# Explanation of each non-vehicle script
+# ⬇️ Scripts that dont go on the vehicles 
 
 # RK_RaceManager
 
@@ -564,7 +564,7 @@ The `RK_PrizeTrigger` script goes on TriggerZome gizmos's and creates an area th
 
 
 
-# The Vehicle Objects hiearchy & and their scripts
+# ⬇️ The Vehicle Objects hiearchy & and all the scripts that go on the vehicle objects
 
 
 ![Shot showing all 8 vehicles in the editor](images/vehicle-shot2.jpg)
