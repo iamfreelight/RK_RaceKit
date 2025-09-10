@@ -198,8 +198,6 @@ export class RK_VehicleScript_1a extends Component<typeof RK_VehicleScript_1a, V
   
   private audioLoopSubscription?: EventSubscription;
   
-  private avatarLerpSpeed: number = 5.0; // higher = faster movement
-  
   private lastBeepTime: number = 0;
   private beepCooldown: number = 1.0; // 1 second cooldown for beep
   private lastParticleTime: number = 0;
@@ -2408,3 +2406,4 @@ class RK_CameraToggleLocal extends hz.Component<typeof RK_CameraToggleLocal, {}>
 }
 
 hz.Component.register(RK_CameraToggleLocal);
+
