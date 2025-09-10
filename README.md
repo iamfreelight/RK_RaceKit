@@ -1,5 +1,6 @@
 # RaceKit System for Meta Horizon Worlds 
 
+![Screenshot 4](images/game_ss5.jpg)
 ![Screenshot 1](images/game_ss1.jpg)
 ![Screenshot 2](images/game_ss2.jpg)
 ![Screenshot 3](images/game_ss3.jpg)
