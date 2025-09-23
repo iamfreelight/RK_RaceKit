@@ -848,7 +848,7 @@ The `RK_PrizeBar` script provides a user interface (UI) element that displays th
 
 **Purpose:**
 
-The `RK_ProjectileSpawner` script is responsible for spawning projectile entities 'prizes' from the 'prizebar' (prefabs) into the world when it receives a message from another script, such as the `RK_PrizeBar`. It manages the spawning process, applies a force to the projectiles, and automatically destroys them after a timeout. A very common need, is on the vehicles root, to spawn "power ups" for the vehicles. This is a SERVER script.
+The `RK_ProjectileSpawner` script is responsible for spawning projectile entities 'prizes' from the 'prizebar' (prefabs) into the world when it receives a message from another script, such as the `RK_PrizeBar`. It manages the spawning process, applies a force to the projectiles, and automatically destroys them after a timeout. 
 
 **Scene Setup:**
 
